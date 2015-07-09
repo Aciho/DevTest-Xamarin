@@ -1,10 +1,10 @@
 ﻿using System;
 
-namespace DevTest
+namespace DevTes
 {
 	public class CSVReader
 	{
-		public CSVReader ()
+		public CSVReader (string assetName)
 		{
 		}
 	}
