@@ -4,13 +4,21 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:minWidth="25px"
-    android:minHeight="25px">
+    android:minHeight="25px"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:actionBarNavMode="list">
+    <Button
+        android:text="Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button1" />
     <ListView
         android:minWidth="25px"
         android:minHeight="25px"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/comicList"
-        xmlns:tools="http://schemas.android.com/tools"
-        tools:listitem="@layout/comiclistitem" />
+        tools:listitem="@layout/comiclistitem"
+        tools:listheader="@layout/list_header"
+        android:cacheColorHint="#ff241637" />
 </LinearLayout>

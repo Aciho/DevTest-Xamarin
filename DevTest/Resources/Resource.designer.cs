@@ -865,14 +865,17 @@ namespace DevTest
 			// aapt resource value: 0x7f090016
 			public const int beginning = 2131296278;
 			
+			// aapt resource value: 0x7f090040
+			public const int button1 = 2131296320;
+			
 			// aapt resource value: 0x7f09002d
 			public const int checkbox = 2131296301;
 			
 			// aapt resource value: 0x7f090010
 			public const int collapseActionView = 2131296272;
 			
-			// aapt resource value: 0x7f09003f
-			public const int comicList = 2131296319;
+			// aapt resource value: 0x7f090041
+			public const int comicList = 2131296321;
 			
 			// aapt resource value: 0x7f090028
 			public const int default_activity_button = 2131296296;
@@ -918,6 +921,9 @@ namespace DevTest
 			
 			// aapt resource value: 0x7f090029
 			public const int list_item = 2131296297;
+			
+			// aapt resource value: 0x7f09003f
+			public const int mainHeader = 2131296319;
 			
 			// aapt resource value: 0x7f090018
 			public const int middle = 2131296280;
@@ -1111,10 +1117,13 @@ namespace DevTest
 			public const int ComicListItem = 2130903064;
 			
 			// aapt resource value: 0x7f030019
-			public const int Main = 2130903065;
+			public const int List_Header = 2130903065;
 			
 			// aapt resource value: 0x7f03001a
-			public const int support_simple_spinner_dropdown_item = 2130903066;
+			public const int Main = 2130903066;
+			
+			// aapt resource value: 0x7f03001b
+			public const int support_simple_spinner_dropdown_item = 2130903067;
 			
 			static Layout()
 			{
@@ -1167,6 +1176,9 @@ namespace DevTest
 			
 			// aapt resource value: 0x7f0a000b
 			public const int abc_shareactionprovider_share_with_application = 2131361803;
+			
+			// aapt resource value: 0x7f0a000f
+			public const int app_list_header = 2131361807;
 			
 			// aapt resource value: 0x7f0a000e
 			public const int app_name = 2131361806;

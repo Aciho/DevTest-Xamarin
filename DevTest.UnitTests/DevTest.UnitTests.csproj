@@ -14,7 +14,6 @@
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
     <AndroidUseLatestPlatformSdk>False</AndroidUseLatestPlatformSdk>
     <AssemblyName>DevTest.UnitTests</AssemblyName>
-    <TargetFrameworkVersion>v4.4</TargetFrameworkVersion>
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -55,26 +54,19 @@
     <None Include="Assets\AboutAssets.txt" />
     <None Include="Properties\AndroidManifest.xml" />
   </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable-hdpi\Icon.png" />
-    <AndroidResource Include="Resources\drawable-mdpi\Icon.png" />
-    <AndroidResource Include="Resources\drawable-xhdpi\Icon.png" />
-    <AndroidResource Include="Resources\drawable-xxhdpi\Icon.png" />
-    <AndroidResource Include="Resources\drawable-xxxhdpi\Icon.png" />
-  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
-  <ItemGroup>
-    <ProjectReference Include="..\DevTest\DevTest.csproj">
-      <Project>{46DA3D31-D27C-4AC7-8C23-20383802654A}</Project>
-      <Name>DevTest</Name>
-      <IsAppExtension>True</IsAppExtension>
-    </ProjectReference>
-  </ItemGroup>
   <ItemGroup>
     <Folder Include="Assets\Data\" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\Data\titleTest1.csv" />
     <AndroidAsset Include="Assets\Data\titleTest2.csv" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DevTest\DevTest.csproj">
+      <Project>{46DA3D31-D27C-4AC7-8C23-20383802654A}</Project>
+      <Name>DevTest</Name>
+      <IsAppExtension>True</IsAppExtension>
+    </ProjectReference>
   </ItemGroup>
 </Project>
