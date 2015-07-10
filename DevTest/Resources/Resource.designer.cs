@@ -802,6 +802,9 @@ namespace DevTest
 			// aapt resource value: 0x7f020057
 			public const int Icon = 2130837591;
 			
+			// aapt resource value: 0x7f020058
+			public const int monoandroidsplash = 2130837592;
+			
 			static Drawable()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
@@ -1178,6 +1181,9 @@ namespace DevTest
 		
 		public partial class Style
 		{
+			
+			// aapt resource value: 0x7f0b008b
+			public const int Mono_Android_Theme_Splash = 2131427467;
 			
 			// aapt resource value: 0x7f0b0063
 			public const int TextAppearance_AppCompat_Base_CompactMenu_Dialog = 2131427427;

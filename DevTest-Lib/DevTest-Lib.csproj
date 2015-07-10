@@ -42,6 +42,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Resources\Resource.designer.cs" />
+    <Compile Include="Source\CSVParser.cs" />
+    <Compile Include="Interfaces\IParser.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -50,4 +52,8 @@
     <AndroidResource Include="Resources\values\Strings.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="Source\" />
+    <Folder Include="Interfaces\" />
+  </ItemGroup>
 </Project>
