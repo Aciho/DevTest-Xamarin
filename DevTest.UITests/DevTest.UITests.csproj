@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{169F7F87-D354-4334-9AD3-167F788DAB01}</ProjectGuid>
+    <ProjectGuid>{671CDBA5-5AA3-46C9-81EC-E937F652D1E0}</ProjectGuid>
     <OutputType>Library</OutputType>
     <RootNamespace>DevTest.UITests</RootNamespace>
     <AssemblyName>DevTest.UITests</AssemblyName>
@@ -38,7 +38,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DevTest\DevTest.csproj">
-      <Project>{46DA3D31-D27C-4AC7-8C23-20383802654A}</Project>
+      <Project>{E8621D83-FA04-41FB-9C06-7B3B3B34A4A6}</Project>
       <Name>DevTest</Name>
       <ReferenceOutputAssembly>False</ReferenceOutputAssembly>
       <Private>False</Private>

@@ -26,6 +26,7 @@ namespace DevTest
 		
 		public static void UpdateIdValues()
 		{
+			global::DevTestLib.Resource.String.library_name = global::DevTest.Resource.String.library_name;
 		}
 		
 		public partial class Animation
@@ -814,15 +815,6 @@ namespace DevTest
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f09003e
-			public const int Name = 2131296318;
-			
-			// aapt resource value: 0x7f09003c
-			public const int Text = 2131296316;
-			
-			// aapt resource value: 0x7f09003d
-			public const int Text1 = 2131296317;
-			
 			// aapt resource value: 0x7f09001c
 			public const int action_bar = 2131296284;
 			
@@ -865,17 +857,11 @@ namespace DevTest
 			// aapt resource value: 0x7f090016
 			public const int beginning = 2131296278;
 			
-			// aapt resource value: 0x7f090040
-			public const int button1 = 2131296320;
-			
 			// aapt resource value: 0x7f09002d
 			public const int checkbox = 2131296301;
 			
 			// aapt resource value: 0x7f090010
 			public const int collapseActionView = 2131296272;
-			
-			// aapt resource value: 0x7f090041
-			public const int comicList = 2131296321;
 			
 			// aapt resource value: 0x7f090028
 			public const int default_activity_button = 2131296296;
@@ -922,11 +908,11 @@ namespace DevTest
 			// aapt resource value: 0x7f090029
 			public const int list_item = 2131296297;
 			
-			// aapt resource value: 0x7f09003f
-			public const int mainHeader = 2131296319;
-			
 			// aapt resource value: 0x7f090018
 			public const int middle = 2131296280;
+			
+			// aapt resource value: 0x7f09003c
+			public const int myButton = 2131296316;
 			
 			// aapt resource value: 0x7f090012
 			public const int never = 2131296274;
@@ -1114,16 +1100,10 @@ namespace DevTest
 			public const int abc_simple_decor = 2130903063;
 			
 			// aapt resource value: 0x7f030018
-			public const int ComicListItem = 2130903064;
+			public const int Main = 2130903064;
 			
 			// aapt resource value: 0x7f030019
-			public const int List_Header = 2130903065;
-			
-			// aapt resource value: 0x7f03001a
-			public const int Main = 2130903066;
-			
-			// aapt resource value: 0x7f03001b
-			public const int support_simple_spinner_dropdown_item = 2130903067;
+			public const int support_simple_spinner_dropdown_item = 2130903065;
 			
 			static Layout()
 			{
@@ -1178,13 +1158,13 @@ namespace DevTest
 			public const int abc_shareactionprovider_share_with_application = 2131361803;
 			
 			// aapt resource value: 0x7f0a000f
-			public const int app_list_header = 2131361807;
+			public const int app_name = 2131361807;
 			
 			// aapt resource value: 0x7f0a000e
-			public const int app_name = 2131361806;
+			public const int hello = 2131361806;
 			
 			// aapt resource value: 0x7f0a000d
-			public const int hello = 2131361805;
+			public const int library_name = 2131361805;
 			
 			static String()
 			{

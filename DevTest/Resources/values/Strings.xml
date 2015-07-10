@@ -2,5 +2,4 @@
 <resources>
 	<string name="hello">Hello World, Click Me!</string>
 	<string name="app_name">DevTest</string>
-	<string name="app_list_header">List of Comics</string>
-	</resources>
+</resources>
