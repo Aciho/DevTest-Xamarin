@@ -5,9 +5,19 @@ namespace DevTestLib
 {
 	public class ComicList : IComicDataSourceListWithFavourites
 	{
+		readonly int MAX_FAVOURITES = 10;
+
 		public void ToggleFavourite(int position)
 		{
-			
+			if (favourites.Contains (position))
+			{
+				favourites.Remove (position);
+			} 
+			else if (favourites.Count < MAX_FAVOURITES)
+			{
+				favourites.Add (position);
+				favourites.Sort();
+			}
 		}
 
 		public int Count
@@ -16,7 +26,8 @@ namespace DevTestLib
 			{
 				if (data == null)
 					return 0;
-				return data.Count;
+				
+				return data.Count + favourites.Count;
 			}
 		}
 
@@ -26,11 +37,17 @@ namespace DevTestLib
 			{
 				if (position >= Count)
 					return null;
-				
-				return data[position];
+
+				if (position < favourites.Count)
+				{
+					return data[favourites[position]];
+				}
+
+				return data[position - favourites.Count];
 			}
 		}
 
+		List<int> favourites = new List<int>();
 		List<ComicData> data;
 
 		public ComicList (IRawComicDataSource dataSource)
