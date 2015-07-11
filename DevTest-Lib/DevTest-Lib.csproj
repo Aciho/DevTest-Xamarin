@@ -43,8 +43,10 @@
   <ItemGroup>
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Source\CSVParser.cs" />
-    <Compile Include="Interfaces\IParser.cs" />
     <Compile Include="Interfaces\IComicDataSource.cs" />
+    <Compile Include="Source\ComicList.cs" />
+    <Compile Include="Interfaces\IRawComicDataSource.cs" />
+    <Compile Include="Source\ComicData.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />

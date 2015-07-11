@@ -49,6 +49,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Source\TestsSample.cs" />
     <Compile Include="Source\CSVParser_Tests.cs" />
+    <Compile Include="Source\ComicList_Tests.cs" />
+    <Compile Include="Source\ComicData_Tests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />

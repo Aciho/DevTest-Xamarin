@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace DevTestLib
 {
-	public class CSVParser : IParser
+	public class CSVParser : IRawComicDataSource
 	{
 		public int Count 
 		{ 

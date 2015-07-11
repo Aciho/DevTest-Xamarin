@@ -9,9 +9,9 @@ namespace DevTest
 	public class ComicDataAdapter: BaseAdapter<IComicDataSource>
 	{
 		Activity context = null;
-		IList<IComicDataSource> source;
+		IComicDataSourceList source;
 
-		public ComicDataAdapter (Activity context, IList<IComicDataSource> source) : base ()
+		public ComicDataAdapter (Activity context, IComicDataSourceList source) : base ()
 		{
 			this.context = context;
 			this.source = source;
