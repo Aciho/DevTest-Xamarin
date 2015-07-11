@@ -2,6 +2,11 @@
 
 namespace DevTestLib
 {
+	public interface IComicDataSourceListWithFavourites : IComicDataSourceList
+	{
+		void ToggleFavourite(int position);
+	}
+
 	public interface IComicDataSourceList
 	{
 		int Count { get;}

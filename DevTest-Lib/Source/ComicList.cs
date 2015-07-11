@@ -3,8 +3,13 @@ using System.Collections.Generic;
 
 namespace DevTestLib
 {
-	public class ComicList : IComicDataSourceList
+	public class ComicList : IComicDataSourceListWithFavourites
 	{
+		public void ToggleFavourite(int position)
+		{
+			
+		}
+
 		public int Count
 		{
 			get
