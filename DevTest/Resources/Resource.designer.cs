@@ -818,14 +818,8 @@ namespace DevTest
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f090040
-			public const int ComicList = 2131296320;
-			
-			// aapt resource value: 0x7f09003e
-			public const int DescriptionText = 2131296318;
-			
-			// aapt resource value: 0x7f09003d
-			public const int NameText = 2131296317;
+			// aapt resource value: 0x7f09003f
+			public const int ComicList = 2131296319;
 			
 			// aapt resource value: 0x7f09001c
 			public const int action_bar = 2131296284;
@@ -875,6 +869,9 @@ namespace DevTest
 			// aapt resource value: 0x7f090010
 			public const int collapseActionView = 2131296272;
 			
+			// aapt resource value: 0x7f09003d
+			public const int comicButton = 2131296317;
+			
 			// aapt resource value: 0x7f090028
 			public const int default_activity_button = 2131296296;
 			
@@ -899,6 +896,9 @@ namespace DevTest
 			// aapt resource value: 0x7f09002c
 			public const int expanded_menu = 2131296300;
 			
+			// aapt resource value: 0x7f09003e
+			public const int favouriteCheck = 2131296318;
+			
 			// aapt resource value: 0x7f090000
 			public const int home = 2131296256;
 			
@@ -920,14 +920,8 @@ namespace DevTest
 			// aapt resource value: 0x7f090029
 			public const int list_item = 2131296297;
 			
-			// aapt resource value: 0x7f09003c
-			public const int lstItemComics = 2131296316;
-			
 			// aapt resource value: 0x7f090018
 			public const int middle = 2131296280;
-			
-			// aapt resource value: 0x7f09003f
-			public const int myButton = 2131296319;
 			
 			// aapt resource value: 0x7f090012
 			public const int never = 2131296274;
@@ -946,6 +940,9 @@ namespace DevTest
 			
 			// aapt resource value: 0x7f09002f
 			public const int radio = 2131296303;
+			
+			// aapt resource value: 0x7f09003c
+			public const int relativeLayout1 = 2131296316;
 			
 			// aapt resource value: 0x7f090032
 			public const int search_badge = 2131296306;

@@ -85,6 +85,7 @@
   <ItemGroup>
     <Folder Include="Assets\Data\" />
     <Folder Include="Adapters\" />
+    <Folder Include="Resources\drawable\" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\Data\titles.csv" />
