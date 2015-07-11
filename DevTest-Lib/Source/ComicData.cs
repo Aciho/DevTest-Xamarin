@@ -18,8 +18,8 @@ namespace DevTestLib
 
 		public ComicData (string name, string description)
 		{
-//			Name = name;
-//			Description = description;
+			Name = name;
+			Description = description;
 		}
 	}
 }

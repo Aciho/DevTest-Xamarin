@@ -9,7 +9,9 @@ namespace DevTestLib
 		{
 			get
 			{
-				return 0;
+				if (data == null)
+					return 0;
+				return data.Count;
 			}
 		}
 
@@ -17,12 +19,28 @@ namespace DevTestLib
 		{
 			get
 			{
-				return null;
+				if (position >= Count)
+					return null;
+				
+				return data[position];
 			}
 		}
 
+		List<ComicData> data;
+
 		public ComicList (IRawComicDataSource dataSource)
 		{
+			data = new List<ComicData> ();
+
+			for (int i = 0; i < dataSource.Count; ++i)
+			{
+				data.Add(Parse(dataSource [i]));
+			}
+		}
+
+		ComicData Parse(string[] rawData)
+		{
+			return new ComicData (rawData [0], rawData [19]);
 		}
 	}
 }
