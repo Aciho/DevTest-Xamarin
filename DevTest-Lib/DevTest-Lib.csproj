@@ -44,6 +44,7 @@
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Source\CSVParser.cs" />
     <Compile Include="Interfaces\IParser.cs" />
+    <Compile Include="Interfaces\IComicDataSource.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />

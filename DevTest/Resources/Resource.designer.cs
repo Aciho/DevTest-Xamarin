@@ -818,6 +818,15 @@ namespace DevTest
 		public partial class Id
 		{
 			
+			// aapt resource value: 0x7f090040
+			public const int ComicList = 2131296320;
+			
+			// aapt resource value: 0x7f09003e
+			public const int DescriptionText = 2131296318;
+			
+			// aapt resource value: 0x7f09003d
+			public const int NameText = 2131296317;
+			
 			// aapt resource value: 0x7f09001c
 			public const int action_bar = 2131296284;
 			
@@ -911,11 +920,14 @@ namespace DevTest
 			// aapt resource value: 0x7f090029
 			public const int list_item = 2131296297;
 			
+			// aapt resource value: 0x7f09003c
+			public const int lstItemComics = 2131296316;
+			
 			// aapt resource value: 0x7f090018
 			public const int middle = 2131296280;
 			
-			// aapt resource value: 0x7f09003c
-			public const int myButton = 2131296316;
+			// aapt resource value: 0x7f09003f
+			public const int myButton = 2131296319;
 			
 			// aapt resource value: 0x7f090012
 			public const int never = 2131296274;
@@ -1103,10 +1115,13 @@ namespace DevTest
 			public const int abc_simple_decor = 2130903063;
 			
 			// aapt resource value: 0x7f030018
-			public const int Main = 2130903064;
+			public const int ComicListItem = 2130903064;
 			
 			// aapt resource value: 0x7f030019
-			public const int support_simple_spinner_dropdown_item = 2130903065;
+			public const int Main = 2130903065;
+			
+			// aapt resource value: 0x7f03001a
+			public const int support_simple_spinner_dropdown_item = 2130903066;
 			
 			static Layout()
 			{
