@@ -800,10 +800,13 @@ namespace DevTest
 			public const int abc_textfield_searchview_right_holo_light = 2130837590;
 			
 			// aapt resource value: 0x7f020057
-			public const int Icon = 2130837591;
+			public const int buttongroupbg = 2130837591;
 			
 			// aapt resource value: 0x7f020058
-			public const int monoandroidsplash = 2130837592;
+			public const int Icon = 2130837592;
+			
+			// aapt resource value: 0x7f020059
+			public const int monoandroidsplash = 2130837593;
 			
 			static Drawable()
 			{
@@ -818,8 +821,8 @@ namespace DevTest
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f09003f
-			public const int ComicList = 2131296319;
+			// aapt resource value: 0x7f090047
+			public const int ComicList = 2131296327;
 			
 			// aapt resource value: 0x7f09001c
 			public const int action_bar = 2131296284;
@@ -866,11 +869,26 @@ namespace DevTest
 			// aapt resource value: 0x7f09002d
 			public const int checkbox = 2131296301;
 			
+			// aapt resource value: 0x7f090043
+			public const int closeButton = 2131296323;
+			
 			// aapt resource value: 0x7f090010
 			public const int collapseActionView = 2131296272;
 			
+			// aapt resource value: 0x7f090045
+			public const int comicButton = 2131296325;
+			
+			// aapt resource value: 0x7f090040
+			public const int comicDate = 2131296320;
+			
 			// aapt resource value: 0x7f09003d
-			public const int comicButton = 2131296317;
+			public const int comicDescription = 2131296317;
+			
+			// aapt resource value: 0x7f09003c
+			public const int comicName = 2131296316;
+			
+			// aapt resource value: 0x7f09003f
+			public const int comicPublisher = 2131296319;
 			
 			// aapt resource value: 0x7f090028
 			public const int default_activity_button = 2131296296;
@@ -896,8 +914,11 @@ namespace DevTest
 			// aapt resource value: 0x7f09002c
 			public const int expanded_menu = 2131296300;
 			
-			// aapt resource value: 0x7f09003e
-			public const int favouriteCheck = 2131296318;
+			// aapt resource value: 0x7f090042
+			public const int favouriteButton = 2131296322;
+			
+			// aapt resource value: 0x7f090046
+			public const int favouriteCheck = 2131296326;
 			
 			// aapt resource value: 0x7f090000
 			public const int home = 2131296256;
@@ -913,6 +934,9 @@ namespace DevTest
 			
 			// aapt resource value: 0x7f090027
 			public const int image = 2131296295;
+			
+			// aapt resource value: 0x7f09003e
+			public const int linearLayout1 = 2131296318;
 			
 			// aapt resource value: 0x7f090006
 			public const int listMode = 2131296262;
@@ -932,6 +956,9 @@ namespace DevTest
 			// aapt resource value: 0x7f090007
 			public const int normal = 2131296263;
 			
+			// aapt resource value: 0x7f090041
+			public const int otherComics = 2131296321;
+			
 			// aapt resource value: 0x7f090004
 			public const int progress_circular = 2131296260;
 			
@@ -941,8 +968,8 @@ namespace DevTest
 			// aapt resource value: 0x7f09002f
 			public const int radio = 2131296303;
 			
-			// aapt resource value: 0x7f09003c
-			public const int relativeLayout1 = 2131296316;
+			// aapt resource value: 0x7f090044
+			public const int relativeLayout1 = 2131296324;
 			
 			// aapt resource value: 0x7f090032
 			public const int search_badge = 2131296306;
@@ -1112,13 +1139,16 @@ namespace DevTest
 			public const int abc_simple_decor = 2130903063;
 			
 			// aapt resource value: 0x7f030018
-			public const int ComicListItem = 2130903064;
+			public const int ComicDetails = 2130903064;
 			
 			// aapt resource value: 0x7f030019
-			public const int Main = 2130903065;
+			public const int ComicListItem = 2130903065;
 			
 			// aapt resource value: 0x7f03001a
-			public const int support_simple_spinner_dropdown_item = 2130903066;
+			public const int Main = 2130903066;
+			
+			// aapt resource value: 0x7f03001b
+			public const int support_simple_spinner_dropdown_item = 2130903067;
 			
 			static Layout()
 			{

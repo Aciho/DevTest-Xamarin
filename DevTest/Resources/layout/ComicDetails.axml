@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <TextView
+        android:text="Comic Name"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/comicName"
+        android:textAlignment="center" />
+    <TextView
+        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pharetra mi metus, in auctor velit commodo eget. Vivamus scelerisque mattis ante, ac venenatis ex lobortis a. Suspendisse mi velit, tristique sit amet scelerisque ac, tincidunt quis neque. Nunc luctus erat tincidunt turpis lobortis pellentesque. Vestibulum rutrum, metus a venenatis condimentum, libero metus blandit libero, at ullamcorper risus nibh sed nunc. Ut vel hendrerit eros. In id elit fermentum, dapibus felis nec, ullamcorper orci. Nulla vel porttitor est, in tincidunt nisl. Sed at malesuada elit. Integer ut orci eget ante ullamcorper gravida eu eu mi. Aliquam gravida lacus non libero cursus viverra. Donec convallis, ipsum eu sodales imperdiet, tellus arcu finibus tellus, a consequat lectus odio a tellus. Quisque dignissim leo vel convallis dictum. Praesent semper massa vel luctus eleifend. Mauris auctor dui sit amet neque consectetur molestie."
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/comicDescription"
+        android:maxHeight="400dp" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout1">
+        <TextView
+            android:text="Publisher"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/comicPublisher" />
+        <TextView
+            android:text="Date"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/comicDate"
+            android:paddingLeft="10dp" />
+    </LinearLayout>
+    <TextView
+        android:text="X other comics by this publisher"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/otherComics" />
+    <Button
+        android:text="Add Favourite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/favouriteButton" />
+    <Button
+        android:text="Close"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/closeButton" />
+</LinearLayout>
