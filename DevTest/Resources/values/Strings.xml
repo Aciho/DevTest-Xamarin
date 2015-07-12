@@ -1,5 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
 	<string name="hello">Hello World, Click Me!</string>
-	<string name="app_name">DevTest</string>
+	<string name="app_name">Dev Test</string>
+	<string name="add_fav">Add Favourite</string>
+	<string name="remove_fav">Remove Favourite</string>
+	<string name="other_comics"> other comics by this publisher</string>
 </resources>

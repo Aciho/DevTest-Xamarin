@@ -7,12 +7,12 @@ using Android.Views;
 
 namespace DevTest
 {
-	public class ComicDataAdapter: BaseAdapter<IComicDataSource>, Android.Widget.AdapterView.IOnItemClickListener
+	public class ComicDataAdapter: BaseAdapter<IComicDataSource>//, Android.Widget.AdapterView.IOnItemClickListener
 	{
 		Activity context = null;
-		IComicDataSourceList source;
+		IComicDataSourceListWithFavourites source;
 
-		public ComicDataAdapter (Activity context, IComicDataSourceList source) : base ()
+		public ComicDataAdapter(Activity context, IComicDataSourceListWithFavourites source) : base ()
 		{
 			this.context = context;
 			this.source = source;
@@ -33,7 +33,7 @@ namespace DevTest
 			get { return source.Count; }
 		}
 
-		public override Android.Views.View GetView (int position, Android.Views.View convertView, Android.Views.ViewGroup parent)
+		public override Android.Views.View GetView(int position, Android.Views.View convertView, Android.Views.ViewGroup parent)
 		{
 			// Get our object for position
 			var item = source[position];			
@@ -43,25 +43,29 @@ namespace DevTest
 			// will sound familiar to MonoTouch developers with UITableViewCell.DequeueReusableCell()
 			var view = (convertView ?? 
 				context.LayoutInflater.Inflate(
-					Android.Resource.Layout.SimpleListItemChecked, 
+					Android.Resource.Layout.SimpleListItemActivated2, 
 					parent, 
 					false));
 
 			// Find references to each subview in the list item's view
 			var txtName = view.FindViewById<TextView>(Android.Resource.Id.Text1);
+			var txtSubtitle = view.FindViewById<TextView>(Android.Resource.Id.Text2);
 
 			//Assign item's values to the various subviews
-			txtName.SetText (item.Name, TextView.BufferType.Normal);
+			txtName.SetText(item.Name, TextView.BufferType.Normal);
+			txtSubtitle.SetText(item.Subtitle, TextView.BufferType.Normal);
+
+
 
 			//Finally return the view
 			return view;
 		}
 
-		public void OnItemClick(AdapterView parent, View view, int position, long id)
-		{
-			var t = source[position];
-			Android.Widget.Toast.MakeText(context, t.Description, Android.Widget.ToastLength.Short).Show();
-		}
+//		public void OnItemClick(AdapterView parent, View view, int position, long id)
+//		{
+//			var t = source[position];
+//			Android.Widget.Toast.MakeText(context, t.Description, Android.Widget.ToastLength.Short).Show();
+//		}
 	}
 }
 

@@ -9,14 +9,46 @@ namespace DevTestLib
 
 		public void ToggleFavourite(int position)
 		{
-			if (favourites.Contains (position))
+			if (position < favourites.Count)
 			{
-				favourites.Remove (position);
-			} 
-			else if (favourites.Count < MAX_FAVOURITES)
+				favourites.RemoveAt(position);
+			}
+			else
 			{
-				favourites.Add (position);
-				favourites.Sort();
+				int dataIndex = position - favourites.Count;
+
+				if (favourites.Contains(dataIndex))
+				{
+					favourites.Remove(dataIndex);
+				} 
+				else if (favourites.Count < MAX_FAVOURITES)
+				{
+					favourites.Add(dataIndex);
+					favourites.Sort();
+				}
+			}
+		}
+
+		public bool IsFavourite(int position)
+		{
+			if (position < favourites.Count)
+			{
+				return true;
+			}
+
+			return favourites.Contains(position - favourites.Count);
+		}
+
+		public int GetPublisherCount(string publisher)
+		{
+			return publishers.GetCount(publisher);
+		}
+
+		public int[] Favourites
+		{
+			get
+			{
+				return favourites.ToArray();
 			}
 		}
 
@@ -48,21 +80,22 @@ namespace DevTestLib
 		}
 
 		List<int> favourites = new List<int>();
-		List<ComicData> data;
+		List<ComicData> data = new List<ComicData> ();
+		PublisherList publishers = new PublisherList();
 
 		public ComicList (IRawComicDataSource dataSource)
 		{
-			data = new List<ComicData> ();
-
 			for (int i = 0; i < dataSource.Count; ++i)
 			{
-				data.Add(Parse(dataSource [i]));
+				var comicItem = Parse(dataSource[i]);
+				data.Add(comicItem);
+				publishers.RecordInstance(comicItem.Publisher);
 			}
 		}
 
 		ComicData Parse(string[] rawData)
 		{
-			return new ComicData (rawData [0], rawData [19]);
+			return new ComicData (rawData[0], rawData[1], rawData[19], rawData[14], rawData[15]);
 		}
 	}
 }

@@ -51,6 +51,7 @@
     <Compile Include="Source\CSVParser_Tests.cs" />
     <Compile Include="Source\ComicList_Tests.cs" />
     <Compile Include="Source\ComicData_Tests.cs" />
+    <Compile Include="Source\PublisherList_Tests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />

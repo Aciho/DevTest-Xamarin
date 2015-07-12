@@ -10,16 +10,36 @@ namespace DevTestLib
 			private set;
 		}
 
-		public string Description
+		public string Subtitle
 		{
 			get;
 			private set;
 		}
 
-		public ComicData (string name, string description)
+		public string Description
+		{
+			get;
+			private set;
+		}
+		public string Publisher
+		{
+			get;
+			private set;
+		}
+
+		public string Date
+		{
+			get;
+			private set;
+		}
+
+		public ComicData (string name, string subtitle, string description, string publisher, string date)
 		{
 			Name = name;
+			Subtitle = subtitle;
 			Description = description;
+			Publisher = publisher;
+			Date = date;
 		}
 	}
 }

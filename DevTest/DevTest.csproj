@@ -15,7 +15,7 @@
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
     <AndroidUseLatestPlatformSdk>False</AndroidUseLatestPlatformSdk>
     <AssemblyName>DevTest</AssemblyName>
-    <TargetFrameworkVersion>v4.4</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.3</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -75,11 +75,6 @@
     <AndroidResource Include="Resources\drawable-xxxhdpi\Icon.png" />
     <AndroidResource Include="Resources\layout\ComicListItem.axml" />
     <AndroidResource Include="Resources\layout\ComicDetails.axml" />
-    <AndroidResource Include="Resources\drawable-hdpi\buttongroupbg.9.png" />
-    <AndroidResource Include="Resources\drawable-mdpi\buttongroupbg.9.png" />
-    <AndroidResource Include="Resources\drawable-xhdpi\buttongroupbg.9.png" />
-    <AndroidResource Include="Resources\drawable-xxhdpi\buttongroupbg.9.png" />
-    <AndroidResource Include="Resources\drawable-xxxhdpi\buttongroupbg.9.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>

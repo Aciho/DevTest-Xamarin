@@ -4,6 +4,7 @@ using DevTestLib;
 using Android.Content.Res;
 using System.IO;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace DevTestUnitTest
 {
@@ -29,7 +30,7 @@ namespace DevTestUnitTest
 				new string[] {"The king of beasts & other creatures","","008082748","GB8101035","0713913363","Searle, Ronald","1920-2011","person","","Searle, Ronald","","","England","London","Allen Lane","1980","[56] pages, chiefly colour illustrations, 23x24 cm","741.5942","L.49/643","English wit and humor, Pictorial ; Animals--Caricatures and cartoons ; English humorous cartoons--Collections","","Col. ill on lining papers"},
 				new string[] {"Thomas Nast : cartoons and illustrations","","009037808","GB7428296","0486229831 ; 0486230678","Nast, Thomas","","person","","Nast, Thomas ; St Hill, Thomas Nast","","","England","New York ; London","Dover Publications ; Constable","1974","ii-x, 146 pages, chiefly illustrations, portraits, 31 cm","741.5973","f75/40472","American wit and humor, Pictorial ; American cartoons--Collections from individual artists","",""},
 				new string[] {"What is it, Tink, is Pan in trouble?","","010348111","GB98W5176","0836218868","Trudeau, G. B. (Garry B.)","1948-","person","","Trudeau, G. B. (Garry B.)","","","England","Sl","Andrews McMeel","1998","96 pages, chiefly illustrations, 23 cm","741.5973","","","","Originally published: London: Fourth Estate, 1992"},
-				new string[] {"¿Qué le pasa a Mateoy : los MediKidz explican qué el VIH","","015847522","GBB184526","9781906935375 ; 1906935378","Chilman-Blair, Kim","","person","","Chilman-Blair, Kim ; DeLoache, Shawn","","","England","London","MediKidz","2011","1 v, chiefly colour illustrations, 26 cm","741.5","","HIV infections--Comic books, strips, etc--Juvenile fiction ; HIV (Viruses)--Comic books, strips, etc--Juvenile fiction ; Medikidz (Fictitious characters)--Comic books, strips, etc--Juvenile fiction","",""}
+				new string[] {"2000 AD","The complete Judge Dredd in Oz","012029155","GB9474205","1852864362","Wagner, John","1949-","person","","Wagner, John ; Grant, Alan ; Robinson, Cliff","","","England","London","Titan","1994","1 v, chiefly illustrations, 28 cm","741.5942","YK.1994.b.13625","Strip cartoons ; England","","Originally published in: 2000 AD progs, 545-570. - Previous ed. in 3 vols.: 1988"}
 			};
 				
 			public string[] this [int i] 
@@ -66,9 +67,29 @@ namespace DevTestUnitTest
 		}
 
 		[Test]
+		public void Subtitle()
+		{
+			Assert.That(comicList[0].Subtitle, Is.EqualTo("La Vie Parisienne"));
+		}
+
+		[Test]
 		public void Description()
 		{
 			Assert.That(comicList[0].Description, Is.EqualTo("Design--History--20th century--Themes, motives ; Art deco ; French caricatures--1920-1930"));
+		}
+
+		[Test]
+		public void Publisher()
+		{
+			// Cheating a little here, but the publisher data for the first one seems a bit broken
+			// We should really do some data validation at some point
+			Assert.That(comicList[1].Publisher, Is.EqualTo("Ravette Books"));
+		}
+
+		[Test]
+		public void Date()
+		{
+			Assert.That(comicList[1].Date, Is.EqualTo("1989"));
 		}
 
 		[Test]
@@ -86,7 +107,7 @@ namespace DevTestUnitTest
 		public void OrderFavourites()
 		{
 			comicList.ToggleFavourite (3);
-			comicList.ToggleFavourite (2);
+			comicList.ToggleFavourite (3); // Adding a favourite shuffles the list down by one
 
 			Assert.That(comicList[0].Name, Is.EqualTo("Emerald warriors"), "Favourites go to the top in their original order, not selection order");
 		}
@@ -95,7 +116,7 @@ namespace DevTestUnitTest
 		public void RemoveFavourites()
 		{
 			comicList.ToggleFavourite (2);
-			comicList.ToggleFavourite (2);
+			comicList.ToggleFavourite (3); // Adding a favourite shuffles the list down by one
 
 			Assert.That(comicList[0].Name, Is.EqualTo("1001 spot illustrations of the lively twenties"), "Toggling twice removes favourites");
 			Assert.That(comicList.Count, Is.EqualTo(11));
@@ -103,24 +124,57 @@ namespace DevTestUnitTest
 		}
 
 		[Test]
-		public void LimitFavourites()
+		public void FavouritesAndOrdering()
 		{
-			comicList.ToggleFavourite (0);
-			comicList.ToggleFavourite (1);
 			comicList.ToggleFavourite (2);
 			comicList.ToggleFavourite (3);
 			comicList.ToggleFavourite (4);
-			comicList.ToggleFavourite (5);
-			comicList.ToggleFavourite (6);
-			comicList.ToggleFavourite (7);
-			comicList.ToggleFavourite (8);
-			comicList.ToggleFavourite (9);
+
+			comicList.ToggleFavourite(1); // Since favourited are at the top, this should unfavourite item 3
+
+			Assert.That(comicList[1].Name, Is.EqualTo("More constant minx"), "Toggling near the top of the lis removes the correct item");
+			Assert.False(comicList.Favourites.Contains(3), "Item removed properly");
+			Assert.False(comicList.Favourites.Contains(1), "Other item not added");
+
+		}
+
+		[Test]
+		public void LimitFavourites()
+		{
+			comicList.ToggleFavourite (10);
+			comicList.ToggleFavourite (10);
+			comicList.ToggleFavourite (10);
+			comicList.ToggleFavourite (10);
+			comicList.ToggleFavourite (10);
+			comicList.ToggleFavourite (10);
+			comicList.ToggleFavourite (10);
+			comicList.ToggleFavourite (10);
+			comicList.ToggleFavourite (10);
+			comicList.ToggleFavourite (10);
 
 			Assert.That(comicList.Count, Is.EqualTo(21), "Can add 10 favourites");
 
 			comicList.ToggleFavourite (10);
 
 			Assert.That(comicList.Count, Is.EqualTo(21), "Cannot add more than 10 favourites");
+		}
+
+		[Test]
+		public void IsFavourite()
+		{
+			comicList.ToggleFavourite (3);
+
+			Assert.True(comicList.IsFavourite(0), "Favourite check in top position");
+			Assert.True(comicList.IsFavourite(4), "Favourite check in regular position");
+			Assert.False(comicList.IsFavourite(3), "Non favourite check");
+		}
+
+		[Test]
+		public void PublisherCount()
+		{
+			Assert.That(comicList.GetPublisherCount("Not a publisher"), Is.EqualTo(0));
+			Assert.That(comicList.GetPublisherCount("Orion Children's"), Is.EqualTo(1));
+			Assert.That(comicList.GetPublisherCount("Titan"), Is.EqualTo(2));
 		}
 	}
 }

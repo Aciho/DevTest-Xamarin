@@ -47,6 +47,8 @@
     <Compile Include="Source\ComicList.cs" />
     <Compile Include="Interfaces\IRawComicDataSource.cs" />
     <Compile Include="Source\ComicData.cs" />
+    <Compile Include="Source\PublisherList.cs" />
+    <Compile Include="Interfaces\IPublisherList.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />

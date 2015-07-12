@@ -800,13 +800,10 @@ namespace DevTest
 			public const int abc_textfield_searchview_right_holo_light = 2130837590;
 			
 			// aapt resource value: 0x7f020057
-			public const int buttongroupbg = 2130837591;
+			public const int Icon = 2130837591;
 			
 			// aapt resource value: 0x7f020058
-			public const int Icon = 2130837592;
-			
-			// aapt resource value: 0x7f020059
-			public const int monoandroidsplash = 2130837593;
+			public const int monoandroidsplash = 2130837592;
 			
 			static Drawable()
 			{
@@ -1202,6 +1199,9 @@ namespace DevTest
 			// aapt resource value: 0x7f0a000b
 			public const int abc_shareactionprovider_share_with_application = 2131361803;
 			
+			// aapt resource value: 0x7f0a0010
+			public const int add_fav = 2131361808;
+			
 			// aapt resource value: 0x7f0a000f
 			public const int app_name = 2131361807;
 			
@@ -1210,6 +1210,12 @@ namespace DevTest
 			
 			// aapt resource value: 0x7f0a000d
 			public const int library_name = 2131361805;
+			
+			// aapt resource value: 0x7f0a0012
+			public const int other_comics = 2131361810;
+			
+			// aapt resource value: 0x7f0a0011
+			public const int remove_fav = 2131361809;
 			
 			static String()
 			{
@@ -1935,7 +1941,7 @@ namespace DevTest
 					16843055,
 					16843056,
 					16843057,
-					16843829};
+					16843802};
 			
 			// aapt resource value: 4
 			public const int MenuView_android_headerBackground = 4;
