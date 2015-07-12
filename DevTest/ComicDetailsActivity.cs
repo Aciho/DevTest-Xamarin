@@ -28,7 +28,7 @@ namespace DevTest
 			var comicDesc = Intent.GetStringExtra("ComicDescription");
 			var comicPubl = Intent.GetStringExtra("ComicPublisher");
 			var comicDate = Intent.GetStringExtra("ComicDate");
-			var position = Intent.GetIntExtra("Position", 0);
+			var id = Intent.GetIntExtra("ID", 0);
 			var favourite = Intent.GetBooleanExtra("Favourite", false);
 			var otherComics = Intent.GetIntExtra("OtherComics", 0);
 
@@ -43,8 +43,7 @@ namespace DevTest
 
 			FindViewById<Button>(Resource.Id.favouriteButton).Click += (object sender, EventArgs e) => 
 			{
-				Console.WriteLine("FavClick " + position);
-				MainActivity.ToggleFavourite(position);
+				MainActivity.ToggleFavourite(id);
 				favourite = !favourite;
 				SetFavouriteButtonText(favourite);
 			};
