@@ -12,13 +12,20 @@ namespace DevTestUnitTest
 		[SetUp]
 		public void Setup()
 		{
-			data1 = new ComicData ("Name", "Subtitle", "Desc", "Publisher", "1966");
-			data2 = new ComicData ("OtherName","OtherSubtitle", "OtherDesc", "OtherPublisher", "2013");
+			data1 = new ComicData (0, "Name", "Subtitle", "Desc", "Publisher", "1966");
+			data2 = new ComicData (2, "OtherName","OtherSubtitle", "OtherDesc", "OtherPublisher", "2013");
 		}
 
 		[TearDown]
 		public void Tear()
 		{
+		}
+
+		[Test]
+		public void ID()
+		{
+			Assert.That(data1.ID, Is.EqualTo(0));
+			Assert.That(data2.ID, Is.EqualTo(2));
 		}
 
 		[Test]

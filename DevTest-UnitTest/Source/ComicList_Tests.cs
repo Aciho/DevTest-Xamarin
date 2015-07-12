@@ -101,13 +101,18 @@ namespace DevTestUnitTest
 			Assert.That(comicList[1].Name, Is.EqualTo("1001 spot illustrations of the lively twenties"), "Everything else bumped down");
 			Assert.That(comicList.Count, Is.EqualTo(12), "Favourites increase the size of the list");
 			Assert.That(comicList[3].Name, Is.EqualTo("Emerald warriors"), "Favourited items keep their place in the list");
+
+			Assert.That(comicList[0].ID, Is.EqualTo(2));
+			Assert.That(comicList[1].ID, Is.EqualTo(0));
+			Assert.That(comicList[3].ID, Is.EqualTo(2));
+
 		}
 
 		[Test]
 		public void OrderFavourites()
 		{
 			comicList.ToggleFavourite (3);
-			comicList.ToggleFavourite (3); // Adding a favourite shuffles the list down by one
+			comicList.ToggleFavourite (2);
 
 			Assert.That(comicList[0].Name, Is.EqualTo("Emerald warriors"), "Favourites go to the top in their original order, not selection order");
 		}
@@ -116,7 +121,7 @@ namespace DevTestUnitTest
 		public void RemoveFavourites()
 		{
 			comicList.ToggleFavourite (2);
-			comicList.ToggleFavourite (3); // Adding a favourite shuffles the list down by one
+			comicList.ToggleFavourite(2);
 
 			Assert.That(comicList[0].Name, Is.EqualTo("1001 spot illustrations of the lively twenties"), "Toggling twice removes favourites");
 			Assert.That(comicList.Count, Is.EqualTo(11));
@@ -124,33 +129,18 @@ namespace DevTestUnitTest
 		}
 
 		[Test]
-		public void FavouritesAndOrdering()
+		public void LimitFavourites()
 		{
+			comicList.ToggleFavourite (0);
+			comicList.ToggleFavourite (1);
 			comicList.ToggleFavourite (2);
 			comicList.ToggleFavourite (3);
 			comicList.ToggleFavourite (4);
-
-			comicList.ToggleFavourite(1); // Since favourited are at the top, this should unfavourite item 3
-
-			Assert.That(comicList[1].Name, Is.EqualTo("More constant minx"), "Toggling near the top of the lis removes the correct item");
-			Assert.False(comicList.Favourites.Contains(3), "Item removed properly");
-			Assert.False(comicList.Favourites.Contains(1), "Other item not added");
-
-		}
-
-		[Test]
-		public void LimitFavourites()
-		{
-			comicList.ToggleFavourite (10);
-			comicList.ToggleFavourite (10);
-			comicList.ToggleFavourite (10);
-			comicList.ToggleFavourite (10);
-			comicList.ToggleFavourite (10);
-			comicList.ToggleFavourite (10);
-			comicList.ToggleFavourite (10);
-			comicList.ToggleFavourite (10);
-			comicList.ToggleFavourite (10);
-			comicList.ToggleFavourite (10);
+			comicList.ToggleFavourite (5);
+			comicList.ToggleFavourite (6);
+			comicList.ToggleFavourite (7);
+			comicList.ToggleFavourite (8);
+			comicList.ToggleFavourite (9);
 
 			Assert.That(comicList.Count, Is.EqualTo(21), "Can add 10 favourites");
 
@@ -166,7 +156,7 @@ namespace DevTestUnitTest
 
 			Assert.True(comicList.IsFavourite(0), "Favourite check in top position");
 			Assert.True(comicList.IsFavourite(4), "Favourite check in regular position");
-			Assert.False(comicList.IsFavourite(3), "Non favourite check");
+			Assert.False(comicList.IsFavourite(2), "Non favourite check");
 		}
 
 		[Test]
@@ -175,6 +165,13 @@ namespace DevTestUnitTest
 			Assert.That(comicList.GetPublisherCount("Not a publisher"), Is.EqualTo(0));
 			Assert.That(comicList.GetPublisherCount("Orion Children's"), Is.EqualTo(1));
 			Assert.That(comicList.GetPublisherCount("Titan"), Is.EqualTo(2));
+		}
+
+		[Test]
+		public void AssigningIDs()
+		{
+			Assert.That(comicList[0].ID, Is.EqualTo(0));
+			Assert.That(comicList[1].ID, Is.EqualTo(1));
 		}
 	}
 }

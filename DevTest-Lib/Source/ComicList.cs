@@ -7,25 +7,16 @@ namespace DevTestLib
 	{
 		readonly int MAX_FAVOURITES = 10;
 
-		public void ToggleFavourite(int position)
+		public void ToggleFavourite(int ID)
 		{
-			if (position < favourites.Count)
+			if (favourites.Contains(ID))
 			{
-				favourites.RemoveAt(position);
-			}
-			else
+				favourites.Remove(ID);
+			} 
+			else if (favourites.Count < MAX_FAVOURITES)
 			{
-				int dataIndex = position - favourites.Count;
-
-				if (favourites.Contains(dataIndex))
-				{
-					favourites.Remove(dataIndex);
-				} 
-				else if (favourites.Count < MAX_FAVOURITES)
-				{
-					favourites.Add(dataIndex);
-					favourites.Sort();
-				}
+				favourites.Add(ID);
+				favourites.Sort();
 			}
 		}
 
@@ -87,15 +78,10 @@ namespace DevTestLib
 		{
 			for (int i = 0; i < dataSource.Count; ++i)
 			{
-				var comicItem = Parse(dataSource[i]);
+				var comicItem = new ComicData (i, dataSource[i][0], dataSource[i][1], dataSource[i][19], dataSource[i][14], dataSource[i][15]);
 				data.Add(comicItem);
 				publishers.RecordInstance(comicItem.Publisher);
 			}
-		}
-
-		ComicData Parse(string[] rawData)
-		{
-			return new ComicData (rawData[0], rawData[1], rawData[19], rawData[14], rawData[15]);
 		}
 	}
 }

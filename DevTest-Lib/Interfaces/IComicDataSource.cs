@@ -4,8 +4,8 @@ namespace DevTestLib
 {
 	public interface IComicDataSourceListWithFavourites : IComicDataSourceList
 	{
-		void ToggleFavourite(int position);
-		bool IsFavourite(int position);
+		void ToggleFavourite(int ID);
+		bool IsFavourite(int ID);
 		int GetPublisherCount(string publisher);
 
 		int[] Favourites { get; }
@@ -19,6 +19,7 @@ namespace DevTestLib
 
 	public interface IComicDataSource
 	{
+		int ID { get; }
 		string Name { get; }
 		string Subtitle { get; }
 		string Description { get; }

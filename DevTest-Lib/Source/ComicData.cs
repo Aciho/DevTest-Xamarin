@@ -4,6 +4,12 @@ namespace DevTestLib
 {
 	public class ComicData : IComicDataSource
 	{
+		public int ID
+		{
+			get;
+			private set;
+		}
+
 		public string Name
 		{
 			get;
@@ -33,8 +39,9 @@ namespace DevTestLib
 			private set;
 		}
 
-		public ComicData (string name, string subtitle, string description, string publisher, string date)
+		public ComicData (int id, string name, string subtitle, string description, string publisher, string date)
 		{
+			ID = id;
 			Name = name;
 			Subtitle = subtitle;
 			Description = description;
