@@ -36,6 +36,8 @@
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
     <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+    <DebugSymbols>true</DebugSymbols>
+    <AndroidLinkMode>SdkOnly</AndroidLinkMode>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -81,7 +83,6 @@
     <ProjectReference Include="..\DevTest-Lib\DevTest-Lib.csproj">
       <Project>{7F0E2799-5376-4A16-AA92-6A1142BC2903}</Project>
       <Name>DevTest-Lib</Name>
-      <Private>False</Private>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
